@@ -541,5 +541,3 @@ public class TargetThread extends Thread{
 
 
 천장에 닿게되면 Game Over문구가 나오며 게임이 종료된다. 다시시작 버튼을 눌러 재시작 할 수 있다.
-
-이상으로 코딩캠프에서의 3박 4일동안 제작한 미니 프로젝트였다.
