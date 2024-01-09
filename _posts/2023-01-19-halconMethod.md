@@ -5,6 +5,8 @@ categories: coding
 tag: [Halcon]
 toc: true
 toc_sticky: true
+sidebar:
+    nav: "counts"
 ---
 
 # HALCON Syntex

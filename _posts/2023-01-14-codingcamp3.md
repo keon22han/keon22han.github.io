@@ -5,6 +5,8 @@ categories: coding
 tag: [java, game]
 toc: true
 toc_sticky: true
+sidebar: 
+	nav: "counts"
 ---
 
 
