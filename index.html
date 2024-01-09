@@ -1,7 +1,17 @@
 ---
-layout: home
+excerpt : "꾸준히 앞으로"
+layout: archive
 author_profile: true
+sidebar_main: true
+entries_layout: list
 ---
+
+<div class="grid__wrapper">
+    {% for post in paginator.posts %}
+    {% include archive-single3.html type="list" %}
+    {% endfor %}
+</div>
+{% include paginator.html %} 
 
 <!-- layout: home
 author_profile: true -->
