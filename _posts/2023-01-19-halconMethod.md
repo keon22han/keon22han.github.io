@@ -4,6 +4,7 @@ title: "Halcon Method Code Review"
 categories: coding
 tag: [Halcon]
 toc: true
+toc_sticky: true
 ---
 
 # HALCON Syntex

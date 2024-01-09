@@ -4,6 +4,7 @@ title: "코딩캠프 미니프로젝트 마무리"
 categories: coding
 tag: [java, game]
 toc: true
+toc_sticky: true
 ---
 
 
