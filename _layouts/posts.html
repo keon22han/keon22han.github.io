@@ -4,6 +4,14 @@ layout: archive
 
 {{ content }}
 
+<script src="https://utteranc.es/client.js"
+        repo="keon22han/keon22han.github.io"
+        issue-term="url"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
@@ -24,13 +32,7 @@ layout: archive
       {% for post in year.items %}
         {% include archive-single.html type=entries_layout %}
       {% endfor %}
-      <script src="https://utteranc.es/client.js"
-        repo="keon22han/keon22han.github.io"
-        issue-term="url"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async>
-      </script>
+      
     </div>
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
