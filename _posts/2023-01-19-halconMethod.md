@@ -2,6 +2,10 @@
 title: "Halcon Method Code Review"
 categories: coding
 tag: [Halcon]
+header:
+    overlay_image: assets/images/halcon.png
+    overlay_filter: 0.5
+    teaser: assets/images/halcon.png
 ---
 
 # HALCON Syntex
