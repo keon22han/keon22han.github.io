@@ -1,4 +1,18 @@
 ---
-layout: home
+excerpt : "🐝 고민하지 말고 일단 해보자 🐝 "
+layout: archive
+sidebar_main: ture
 author_profile: true
+entries_layout: grid
+header:
+    overlay_image: https://images.unsplash.com/photo-1663863067918-6bab4d94eb7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80
+    overlay_filter: 0.1 # same as adding an opacity of 0.5 to a black background
+    caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
+
+<div class="grid__wrapper">
+{% for post in paginator.posts %}
+{% include archive-single.html type="grid" %}
+{% endfor %}
+</div>
+{% include paginator.html %} 
