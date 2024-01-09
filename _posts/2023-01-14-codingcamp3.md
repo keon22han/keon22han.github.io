@@ -3,6 +3,7 @@ layout: single
 title: "코딩캠프 미니프로젝트 마무리"
 categories: coding
 tag: [java, game]
+toc: true
 ---
 
 # 코딩캠프 (탱크 게임 , 테트리스 실행결과)
