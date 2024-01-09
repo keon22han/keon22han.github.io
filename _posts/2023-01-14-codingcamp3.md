@@ -480,7 +480,7 @@ public class TargetThread extends Thread{
 
 ---
 
-### 게임 실행 화면
+## 게임 실행 화면
 
 
 ![](https://velog.velcdn.com/images/keonheehan/post/c6f98bf7-b82f-4b9e-926f-359e2064cc1c/image.png)
@@ -539,4 +539,4 @@ public class TargetThread extends Thread{
 
 천장에 닿게되면 Game Over문구가 나오며 게임이 종료된다. 다시시작 버튼을 눌러 재시작 할 수 있다.
 
-이상으로 코딩캠프에서의 3박 4일동안 제작한 미니 프로젝트였습니다. 감사합니다.
+이상으로 코딩캠프에서의 3박 4일동안 제작한 미니 프로젝트였다.
