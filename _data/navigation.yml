@@ -14,7 +14,7 @@ main:
   #   url: /sitemap/
 
 counts:
-  - title: "카테고리"
+  - title: "Categories"
     use: true
-  - title: "태그"
+  - title: "Tags"
     use: true
