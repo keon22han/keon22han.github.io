@@ -33,7 +33,31 @@
         {% include_cached search/search_form.html %}
       </div>
     {% endif %}
+    <!--사이드바 위, 아래, 홈버튼 기능 추가-->
+    <aside class="sidebar__top">
+      <a href="#site-nav"> <i class="fas fa-angle-double-up fa-2x"></i> </a>
+    </aside>
 
+    <aside class="sidebar__bottom">
+      <a href="#footer"> <i class="fa fa-angle-double-down fa-2x"></i> </a>
+    </aside>
+
+    <!-- 라이트모드 토글 추가 -->
+    <aside class= "dark__toggle">
+      {% if site.minimal_mistakes_skin2 %}
+        <i class="fas fa-adjust" aria-hidden="true" onclick="node1=document.getElementById('theme_source'); node2=document.getElementById('theme_source_2');
+          if(node1.getAttribute('rel')=='stylesheet') {
+            node1.setAttribute('rel', 'stylesheet alternate'); 
+            node2.setAttribute('rel', 'stylesheet');
+            sessionStorage.setItem('theme', 'dark');
+          } else {
+              node2.setAttribute('rel', 'stylesheet alternate'); 
+              node1.setAttribute('rel', 'stylesheet');
+              sessionStorage.setItem('theme', 'light');
+          } return false;" style="cursor:pointer">
+        </i>
+      {% endif %}
+    </aside>
     <div id="footer" class="page__footer">
       <footer>
         {% include footer/custom.html %}
