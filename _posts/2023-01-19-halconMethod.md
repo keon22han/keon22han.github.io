@@ -15,8 +15,8 @@ header:
 - **`for Index := Start to End by Step`**
 - 일반적으로 고정된 반복 횟수 동안 실행되는 루프 블록을 시작합니다.
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 |
     | --- | --- | --- | --- |
     | None | None | None | None |
@@ -38,8 +38,8 @@ I:=[]
 - `dev_update_off()`
 - dev_update_pc, dev_update_var 및 dev_update_window를 'off'로 전환합니다.
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 |
     | --- | --- | --- | --- |
     | None | None | None | None |
@@ -437,8 +437,8 @@ difference(X,Y,RegionDifference)
 - `smallest_rectangle2(Regions, Row, Column, Phi, Length1, Length2)`
 - 해당 아이코닉 변수의 행, 렬, Phi, 길이, 너비 값을 콘트롤 변수에 저장
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 |
     | --- | --- | --- | --- |
     | Regions | input_control | region(-array) → object | 대상 아이코닉 변수 |
@@ -452,7 +452,7 @@ difference(X,Y,RegionDifference)
 - 멀티스레딩 범위: 글로벌(모든 스레드에서 호출할 수 있음).
 - 입력이 비어 있지 않으면 연산자 minest_rectangle2가 값 2(H_MSG_TRUE)를 반환합니다. 빈 입력(사용 가능한 입력 영역 없음)의 경우 동작은 연산자 set_system('no_object_result', <Result>)을 통해 설정됩니다. 빈 영역의 경우 동작(영역은 빈 집합)은 set_system('empty_region_result', <Result>)을 통해 설정됩니다. 필요한 경우 예외가 발생합니다..
 - 예시
-    
+  
     ```jsx
     read_image(Image,'fabrik')
     regiongrowing(Image,Regions,5,5,6,100)
@@ -462,15 +462,15 @@ difference(X,Y,RegionDifference)
     dev_display(Rectangle)
     ```
     
-        
+    ​    
 
 ## **`add_metrology_object_rectangle2_measure`**
 
 - `add_metrology_object_rectangle2_measure(MetrologyHandle, Row, Column, Phi, Length1, Length2, MeasureLength1, MeasureLength2, MeasureSigma, MeasureThreshold, GenParamName, GenParamValue, Index)`
 - 매트릭 핸들에 직사각형 모델을 추가 후 해당 메트릭 개체의 인덱스 정보를 담은 컨트롤 변수 하나 생성
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 | 권장 값 |
     | --- | --- | --- | --- | --- |
     | MetrologyHandle | input_control, state is modified | metrology_model → (handle) | 메트릭 객체 |  |
@@ -496,8 +496,8 @@ difference(X,Y,RegionDifference)
 - `apply_metrology_model(Image, MetrologyHandle)`
 - 모서리 위치에 기하학적 모양 맞추기**.**
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 |
     | --- | --- | --- | --- |
     | Image | input_control | singlechannelimage → object (byte / uint2 / real) | 대상 아이코닉 변수 |
@@ -512,8 +512,8 @@ difference(X,Y,RegionDifference)
 - `get_metrology_object_param(MetrologyHandle, Index, GenParamName, GenParamValue)`
 - 원하는 메트릭 객체(MetrologyHandle)의 파라미터(PK_Index)에 액세스.
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 | 권장 값 |
     | --- | --- | --- | --- | --- |
     | MetrologyHandle | input_control | metrology_model → (handle) | 메트릭 객체 |  |
@@ -530,8 +530,8 @@ difference(X,Y,RegionDifference)
 - `get_metrology_object_result_contour(Contour, MetrologyHandle, Index, Instance, Resolution)`
 - 선택한 메트릭 객체(들)의 이미지 좌표에서 측정된 윤곽선 이미지를 아이코닉 변수로 생성
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 | 권장 값 |  |
     | --- | --- | --- | --- | --- | --- |
     | Contour | output_object | xld_cont(-array) → object | 이미지를 저장할 변수명 |  |  |
@@ -565,7 +565,7 @@ difference(X,Y,RegionDifference)
 | UsedThreshold | output_control | number(-array) → (integer / string) | 사용된 threshold값. |
 - binary_threshold는 자동으로 결정된 글로벌 threshold값을 사용하여 단일 채널 이미지를 분할하고 영역에서 분할된 영역을 반환합니다. 이는 예를 들어 균일하게 조명된 배경의 문자를 분할하는 데 유용하다. 또한 binary_threshold는 UsedThreshold에서 사용된 threshold값을 반환한다.사용된 임계값은 Method에 지정된 방법에 따라 결정된다. 현재 연산자는 'max_separability'와 'smooth_histo'의 두 가지 방법을 제공한다. 두 가지 방법은 모두 히스토그램이 바이모달인 영상에만 사용해야 한다.'smooth_histo' 메서드는 연산자 bin_threshold에서 제공한 것과 동일한 기능을 제공한다. max_separability' 메서드는 UsedThreshold에 대한 더 작은 값을 결정하는 경향이 있다. 게다가, 그것은 나머지 스펙트럼에서 멀리 떨어져 있는 히스토그램의 얇은 고립 피크에 덜 민감하며 종종 'smooth_histo'보다 빠르다.
 - 이해를 돕기 위한 예시
-    
+  
     
 
 ## `opening_circle`
@@ -588,7 +588,7 @@ difference(X,Y,RegionDifference)
 - opening_circle은 순환 구조 요소를 가진 민코프스키 덧셈에 이은 침식으로 정의된다. 개방은 (원형 구조 요소보다 더 큰) 작은 영역을 제거하고 영역의 경계를 평활화하는 역할을 한다.
 - opening_circle은 모든 매개 변수가 올바른 경우 2(H_MSG_TRUE)를 반환한다. 입력 영역이 비어 있거나 없는 경우의 동작은 다음을 통해 설정할 수 있다:                                                                                                              영역 없음: set_system('no_object_result', <RegionResult>)                                                                                                빈 영역: set_system('empty_region_result', <RegionResult>)                                                                                            그렇지 않으면 예외가 발생한다.
 - 예시
-    
+  
     ```jsx
     * Large regions in an aerial picture (beech trees or meadows):
     read_image (Image, 'forest_road')
@@ -666,8 +666,8 @@ dev_display (ConnectedRegions)
 - `smallest_rectangle2(Regions, Row, Column, Phi, Length1, Length2)`
 - 해당 아이코닉 변수의 행, 렬, Phi, 길이, 너비 값을 컨트롤 변수에 저장
 - 매개변수
-    
-    
+  
+  
     | 변수명 | 입출력 | 타입 | 설명 |
     | --- | --- | --- | --- |
     | Regions | input_control | region(-array) → object | 대상 아이코닉 변수 |
@@ -681,7 +681,7 @@ dev_display (ConnectedRegions)
 - 멀티스레딩 범위: 글로벌(모든 스레드에서 호출할 수 있음).
 - 입력이 비어 있지 않으면 연산자 minest_rectangle2가 값 2(H_MSG_TRUE)를 반환합니다. 빈 입력(사용 가능한 입력 영역 없음)의 경우 동작은 연산자 set_system('no_object_result', <Result>)을 통해 설정됩니다. 빈 영역의 경우 동작(영역은 빈 집합)은 set_system('empty_region_result', <Result>)을 통해 설정됩니다. 필요한 경우 예외가 발생합니다..
 - 예시
-    
+  
     ```jsx
     read_image(Image,'fabrik')
     regiongrowing(Image,Regions,5,5,6,100)
@@ -710,7 +710,8 @@ dev_display (ConnectedRegions)
 기본값: 2.0
 권장 값: 1.0, 1.5, 2.0, 3.0, 4.0
 제한: 알파 > 0.0 |
-- gen_polygons_xld는 다각형별로 XLD 등고선(윤곽선)을 근사합니다. 근사치의 유형은 유형별로 설정할 수 있습니다. 근사치의 임계값은 알파를 통해 설정됩니다. 이 절차는 열린 윤곽선과 닫힌 윤곽선을 처리할 수 있습니다. 결과적으로 대략적인 XLD 다각형이 다각형으로 반환됩니다.                                                                  윤곽선은 Ramer 알고리즘으로 근사할 수 있으며, 이 알고리즘은 윤곽선에 대한 근사 다각형의 유클리드 거리가 최대 알파 픽셀 단위가 되도록 근사합니다.
+- gen_polygons_xld는 다각형별로 XLD 등고선(윤곽선)을 근사합니다. 근사치의 유형은 유형별로 설정할 수 있습니다. 근사치의 임계값은 알파를 통해 설정됩니다. 이 절차는 열린 윤곽선과 닫힌 윤곽선을 처리할 수 있습니다. 결과적으로 대략적인 XLD 다각형이 다각형으로 반환됩니다.                                                                  
+- 윤곽선은 Ramer 알고리즘으로 근사할 수 있으며, 이 알고리즘은 윤곽선에 대한 근사 다각형의 유클리드 거리가 최대 알파 픽셀 단위가 되도록 근사합니다.
 
 ## `split_contours_xld`
 
@@ -749,7 +750,7 @@ dev_display (ConnectedRegions)
 - length_xld는 등고선 또는 다각형 XLD의 길이를 계산한다. 길이는 등고선 또는 다각형에서 연속되는 점들의 유클리드 거리의 합으로 계산된다. 둘 이상의 윤곽선 또는 다각형을 통과하면 결과가 XLD의 각 윤곽선 또는 다각형과 동일한 순서로 튜플에 저장된다.
 - length_xld는 입력이 비어 있지 않으면 2(H_MSG_TRUE)를 반환한다. 입력이 비어 있으면 set_system(: 'no_object_result', <Result>:)을 통해 동작을 설정할 수 있다. 필요한 경우 예외가 발생한다.
 - 이해를 돕기 위한 예시
-    
+  
 
 
 ## `area_center_points_xld`
@@ -1065,8 +1066,8 @@ dev_display (Regions)
 - closing_rectangle1은 확장_rectangle1에 이어 입력 영역에서 roomation_rectangle1을 수행합니다. 직사각형 구조 요소의 크기는 너비 및 높이 매개변수에 의해 결정됩니다. 모든 닫힘 변형의 경우와 마찬가지로 영역의 경계가 평활되고 직사각형 구조 요소보다 작은 영역 내의 구멍이 닫힙니다.
 - closing_rectangle1은 모든 매개 변수가 올바른 경우 2(H_MSG_TRUE)를 반환한다. 입력 영역이 비어 있거나 없는 경우의 동작은 다음을 통해 설정할 수 있다:                                                                                                            영역 없음: set_system('no_object_result', <RegionResult>)                                                                                          빈 영역: set_system('empty_region_result', <RegionResult>)                                                                                                                    그렇지 않으면 예외가 발생합니다.
 - 이해를 돕기 위한 이미지
-    
- 
+  
+
 
 ## `area_center`
 
