@@ -85,7 +85,7 @@
 
 <nav class="nav__list">
   {% if navigation[0].use %}
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <input id="ac-toc" name="accordion-toc" type="text" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items">
     <span class="nav__sub-title">{{ navigation[0].title }}</span>
@@ -106,7 +106,7 @@
   {% endif %}
 
   {% if navigation[1].use %}
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <input id="ac-toc" name="accordion-toc" type="text" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items">
     <span class="nav__sub-title">{{ navigation[1].title }}</span>
