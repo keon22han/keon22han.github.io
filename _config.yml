@@ -17,7 +17,7 @@ minimal_mistakes_skin2   : "dark"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "💻"
+title                    : ""
 title_separator          : "|"  # "-" 는 옆으로
 subtitle                 : ""
 name                     : "Keonhee Han"
